@@ -15,20 +15,19 @@ from 'mdb-react-ui-kit';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { Link } from 'react-router-dom';
-import "./Login.css"
+import "./aLogin.css"
 import Navbar1 from '../components/Navbar1';
-import Navbar3 from '../components/Navbar3';
-function Login() {
+function ALogin() {
   return (
     <MDBContainer fluid>
-    <Navbar3/>
+    <Navbar1/>
       <MDBCard className='text-black m-5' style={{borderRadius: '25px'}}>
         <MDBCardBody>
         
           <MDBRow>
             <MDBCol md='10' lg='6' className='order-2 order-lg-1 d-flex flex-column align-items-center'>
 
-              <p classNAme="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4"><b>SIGN IN</b></p>
+              <p classNAme="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
 
               <div className="d-flex flex-row align-items-center mb-4 ">
                 <MDBIcon fas icon="user me-3" size='lg'/>
@@ -49,10 +48,7 @@ function Login() {
                 
               </div>
 
-             <Link to="/userhome"><MDBBtn className='mb-4' size='lg'>Login</MDBBtn></Link> 
-                <p className="mb-1 pb-lg-2" style={{color: '#393f81'}}>Don't have an account? <Link to="/register" style={{color: '#393f81'}}>Register</Link></p>
-             
-                <p className="mb-1 pb-lg-2" style={{color: '#393f81'}}>Admin Login? <Link to="/ALogin" style={{color: '#393f81'}}>Login</Link></p>
+             <Link to="/AHome"><MDBBtn className='mb-4' size='lg'>Login</MDBBtn></Link> 
             </MDBCol>
 
             <MDBCol md='10' lg='6' className='order-1 order-lg-2 d-flex align-items-center'>
@@ -67,4 +63,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default ALogin;
