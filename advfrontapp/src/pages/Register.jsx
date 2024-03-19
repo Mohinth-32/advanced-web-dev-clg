@@ -16,17 +16,18 @@ import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
+import Navbar3 from '../components/Navbar3';
 function Register() {
   return (
     <MDBContainer fluid>
-
+    <Navbar3/>
       <MDBCard className='text-black m-5' style={{borderRadius: '25px'}}>
         <MDBCardBody>
         
           <MDBRow>
             <MDBCol md='10' lg='6' className='order-2 order-lg-1 d-flex flex-column align-items-center'>
 
-              <p classNAme="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
+              <p classNAme="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4"><b>SIGN UP</b></p>
 
               <div className="d-flex flex-row align-items-center mb-4 ">
                 <MDBIcon fas icon="user me-3" size='lg'/>
@@ -52,8 +53,14 @@ function Register() {
                 
               </div>
 
-              <MDBBtn className='mb-4' size='lg'>Register</MDBBtn>
-                <p className="mb-5 pb-lg-2" style={{color: '#393f81'}}>Already have an account? <Link to="/login" style={{color: '#393f81'}}>Login</Link></p>
+             <Link to="/Login"><MDBBtn className='mb-4' size='lg'>Register</MDBBtn></Link> 
+             <p className="mb-1 pb-lg-2" style={{ color: '#393f81' }}>
+             Already have an account? <Link to="/login" style={{ color: '#393f81' }}>Login</Link>
+           </p>
+           <p className="mb-1" style={{ color: '#393f81' }}>
+             <Link to="/ALogin" style={{ color: '#393f81' }}>Admin Login</Link>
+           </p>
+           
             </MDBCol>
 
             <MDBCol md='10' lg='6' className='order-1 order-lg-2 d-flex align-items-center'>
@@ -63,7 +70,7 @@ function Register() {
           </MDBRow>
         </MDBCardBody>
       </MDBCard>
-
+      
     </MDBContainer>
   );
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-import "./Login.css"
 import {
   MDBBtn,
   MDBContainer,
@@ -7,99 +6,64 @@ import {
   MDBCol,
   MDBCard,
   MDBCardBody,
+  MDBCardImage,
   MDBInput,
-  MDBCheckbox,
-  MDBIcon
+  MDBIcon,
+  MDBCheckbox
 }
 from 'mdb-react-ui-kit';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import Navbar from '../components/Navbar';
 import { Link } from 'react-router-dom';
+import "./Login.css"
+import Navbar1 from '../components/Navbar1';
+import Navbar3 from '../components/Navbar3';
 function Login() {
   return (
-    
-    <MDBContainer fluid className='d-flex align-items-center justify-content-center bg-image' style={{
-        backgroundImage: 'url(https://t4.ftcdn.net/jpg/05/76/19/83/360_F_576198341_zSYw1WulnmONErcsNGUlrVoYIoAkT80d.jpg)',
-        backgroundSize: 'cover',  // Ensures the background image covers the entire container
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        width: '100%',  // Set width to 100% for full width
-        height: '100vh', // Adjust height as needed
-      }}>  
-      <MDBRow>
-      <p className="mb-5 pb-lg-2" style={{color: '#393f81'}}>Don't have an account? <a href="#!" style={{color: '#393f81'}}>Register here</a></p>
-        <MDBCol md='6' className='text-center text-md-start d-flex flex-column justify-content-center'>
-
-          <h1 className="my-5 display-3 fw-bold ls-tight px-3" style={{color: 'hsl(218, 81%, 95%)'}}>
-            LUXURY STAY <br />
+    <MDBContainer fluid>
+    <Navbar3/>
+      <MDBCard className='text-black m-5' style={{borderRadius: '25px'}}>
+        <MDBCardBody>
         
-          </h1>
+          <MDBRow>
+            <MDBCol md='10' lg='6' className='order-2 order-lg-1 d-flex flex-column align-items-center'>
 
-          <p className='px-3' style={{color: 'hsl(218, 81%, 85%)'}}>
-          We Luxury Houseboat, a division of Holy Squad Hospitalities are one of the best top rated service providers in Kumarakom and Allappey. We proffer you the best way to explore the beauty of Kerala through the enchanting backwaters
-          </p>
+              <p classNAme="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4"><b>SIGN IN</b></p>
 
-        </MDBCol>
-
-        <MDBCol md='6' className='position-relative'>
-
-          <div id="radius-shape-1" className="position-absolute rounded-circle shadow-5-strong"></div>
-          <div id="radius-shape-2" className="position-absolute shadow-5-strong"></div>
-
-          <MDBCard className='my-5 bg-glass'>
-            <MDBCardBody className='p-5'>
-
-              <MDBRow>
-                <MDBCol col='6'>
-                  <MDBInput wrapperClass='mb-4' label='First name' id='form1' type='text'/>
-                </MDBCol>
-
-                <MDBCol col='6'>
-                  <MDBInput wrapperClass='mb-4' label='Last name' id='form2' type='text'/>
-                </MDBCol>
-              </MDBRow>
-
-              <MDBInput wrapperClass='mb-4' label='Email' id='form3' type='email'/>
-              <MDBInput wrapperClass='mb-4' label='Password' id='form4' type='password'/>
-
-              <div className='d-flex justify-content-center mb-4'>
-              
+              <div className="d-flex flex-row align-items-center mb-4 ">
+                <MDBIcon fas icon="user me-3" size='lg'/>
               </div>
 
-             <Link to="/"> <MDBBtn className='w-100 mb-4' size='md'>sign up</MDBBtn></Link>
-              <p className="mb-5 pb-lg-2" style={{color: '#393f81'}}>Don't have an account? <Link to="/Register" style={{color: '#393f81'}}>Register here</Link></p>
-              <div className="text-center">
-
-                <p>or sign up with:</p>
-
-                <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
-                  <MDBIcon fab icon='facebook-f' size="sm"/>
-                </MDBBtn>
-
-                <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
-                  <MDBIcon fab icon='twitter' size="sm"/>
-                </MDBBtn>
-
-                <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
-                  <MDBIcon fab icon='google' size="sm"/>
-                </MDBBtn>
-
-                <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
-                  <MDBIcon fab icon='github' size="sm"/>
-                </MDBBtn>
-
+              <div className="d-flex flex-row align-items-center mb-4">
+                <MDBIcon fas icon="envelope me-3" size='lg'/>
+                <MDBInput label='Your Email' id='form2' type='email'/>
               </div>
 
-            </MDBCardBody>
-          </MDBCard>
+              <div className="d-flex flex-row align-items-center mb-4">
+                <MDBIcon fas icon="lock me-3" size='lg'/>
+                <MDBInput label='Password' id='form3' type='password'/>
+              </div>
 
-        </MDBCol>
 
-      </MDBRow>
-  
-    </MDBContainer> 
-    
+              <div className='mb-4'>
+                
+              </div>
+
+             <Link to="/userhome"><MDBBtn className='mb-4' size='lg'>Login</MDBBtn></Link> 
+                <p className="mb-1 pb-lg-2" style={{color: '#393f81'}}>Don't have an account? <Link to="/register" style={{color: '#393f81'}}>Register</Link></p>
+             
+                <p className="mb-1 pb-lg-2" style={{color: '#393f81'}}>Admin Login? <Link to="/ALogin" style={{color: '#393f81'}}>Login</Link></p>
+            </MDBCol>
+
+            <MDBCol md='10' lg='6' className='order-1 order-lg-2 d-flex align-items-center'>
+              <MDBCardImage src='https://alleppeyhouseboat.in/wp-content/uploads/2019/02/doubledeck-Copy-1-1024x512.jpg' fluid/>
+            </MDBCol>
+
+          </MDBRow>
+        </MDBCardBody>
+      </MDBCard>
+
+    </MDBContainer>
   );
 }
 
